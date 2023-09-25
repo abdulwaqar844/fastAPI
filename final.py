@@ -59,4 +59,5 @@ async def upload_file(pdf_file: UploadFile):
     return {"message": results}
 
 if __name__ == "__main__":
-    uvicorn.run("final:app", host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    port = int(os.environ.get("PORT", 5000))
+    uvicorn.run("final:app", host="0.0.0.0", port=port)
